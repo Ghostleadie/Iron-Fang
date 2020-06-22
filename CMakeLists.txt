@@ -19,6 +19,7 @@ option(BUILD_UNIT_TESTS OFF)
 add_subdirectory(IFEngine/Vendor/bullet)
 
 option(freetype-gl_BUILD_TESTS OFF)
+option(freetype-gl_BUILD_DEMOS OFF)
 add_subdirectory(IFEngine/Vendor/freetype)
 
 add_subdirectory(IFEngine/Vendor/spdlog)
@@ -116,7 +117,7 @@ add_executable(${PROJECT_NAME}	${PROJECT_SOURCES}
 								${PROJECT_HEADERS_COMPONENTS} ${PROJECT_HEADERS_RENDERING}
 								${PROJECT_HEADERS_SHADERS}
 								${PROJECT_SHADERS} ${PROJECT_CONFIGS}
-								${VENDORS_SOURCES}
+								${VENDORS_SOURCES})
 	
 target_link_libraries(${PROJECT_NAME} assimp glfw
                       ${GLFW_LIBRARIES} ${GLAD_LIBRARIES}
